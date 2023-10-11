@@ -5,13 +5,21 @@ const App = () => {
   return (
     <div>
       <header>
-        <button><Link to="/shop">Shop</Link></button>
-        <button><Link to="/cart">Cart</Link></button>
+        <h2>CoffeeRoasters</h2>
+        <div>
+          <button><Link to="/shop">Shop</Link></button>
+          <button><Link to="/cart">Cart</Link></button>
+        </div>
       </header>
-      <img className='homepageImage' src='src/pictures/pexels-shahidrafique-awan-744479.jpg'/>
-      <h1>Limited Drop of our Ceremonial Matcha Powder</h1>
-      <p>Zen energy, endless ways to enjoy</p>
-      <button><Link to="/shop">Shop</Link></button>
+      <div className='homeContent'>
+        <div>
+          <h1>Limited Drop of our Ceremonial Matcha Powder</h1>
+          <p>Zen energy, endless ways to enjoy</p>
+          <button><Link to="/shop">Shop</Link></button>
+        </div>
+        <img className='homepageImage' src='src/pexels-ben-mack-5708045.jpg'/>
+      </div>
+      
     </div>
   );
 };

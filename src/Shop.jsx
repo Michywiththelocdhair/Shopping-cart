@@ -28,11 +28,14 @@ const Shop = ({ addItem }) => {
   return (
     <div>
       <header>
-        <button><Link to="/">Home</Link></button>
-        <button><Link to="/cart">Cart</Link></button>
+        <h2>CoffeeRoasters</h2>
+        <div>
+          <button><Link to="/">Home</Link></button>
+          <button><Link to="/cart">Cart</Link></button>
+        </div>
       </header>
-      <h1>Shop</h1>
-      <div className='allProducts'>
+      <div className='shopContent'>
+        <div className='allProducts'>
         {items.map((item) => (
           <div key={item.id} className='product'>
             <h2>{item.name}</h2>
@@ -41,6 +44,7 @@ const Shop = ({ addItem }) => {
             <button onClick={() => shoppingCart(item)}>Add to Cart</button>
           </div>
         ))}
+      </div>
       </div>
       <div className="shoppingCart">
         <h1>Shopping Cart</h1>
