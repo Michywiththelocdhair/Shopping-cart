@@ -16,12 +16,14 @@ const Shop = ({ addItem }) => {
     {id:3, name: 'Product 3', description: 'Description of product 3', price: 20},
     {id:4, name: 'Product 4', description: 'Description of product 4', price: 30},
   ];
-
-  useEffect(() => {
-  console.log("Cart:", cart);
-  console.log("Total:", total);
-}, [cart, total]);
-
+  
+  const removeItem = (index) => {
+  const removedItem = cart[index];
+  const newCart = [...cart];
+  newCart.splice(index, 1);
+  setCart(newCart);
+  setTotal(total - removedItem.price);
+};
   
   return (
     <div>
@@ -39,6 +41,19 @@ const Shop = ({ addItem }) => {
             <button onClick={() => shoppingCart(item)}>Add to Cart</button>
           </div>
         ))}
+      </div>
+      <div className="shoppingCart">
+        <h1>Shopping Cart</h1>
+        <ul>
+        {cart.map((item, index) => (
+            <li key={index}>
+            {item.name} - ${item.price}
+              <button onClick={() => removeItem(index)}>Remove</button>
+            </li>
+        ))}
+        </ul>
+        <p>Total: ${total}</p>
+        <button>Check Out</button>
       </div>
     </div>
   );

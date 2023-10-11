@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Shop from "./Shop";
-import Cart from "./Cart";
 
 const Router = () => {
   const [cart, setCart] = useState([]);
@@ -23,10 +22,6 @@ const Router = () => {
       element: <App />,
     },
     {
-      path: "/cart",
-      element: <Cart cart={cart} removeItem={removeItemFromCart}/>,
-    },
-    {
       path: "/shop",
       element: <Shop addItem={addItemToCart}/>,
     }
@@ -37,7 +32,6 @@ const Router = () => {
       <Routes>
         {/* Render your routes here */}
         <Route path="/" element={<App />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/shop" element={<Shop addItem={addItemToCart} />} />
       </Routes>
     </RouterProvider>
