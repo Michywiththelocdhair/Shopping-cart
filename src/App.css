@@ -31,12 +31,23 @@ button {
 .allProducts {
   font-family: 'Josefin Sans', sans-serif;
   display: grid;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: repeat(4, 320px);
   gap: 10px;
   margin: 10px;
 }
 
 .product {
   border: solid 2px black;
+  padding: 10px;
+}
+
+.shoppingCart {
+  font-family: 'Josefin Sans', sans-serif;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  background-color: #fff;
+  min-height: 600px;
+  min-width: 350px;
   padding: 10px;
 }

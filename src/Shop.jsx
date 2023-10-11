@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Shop = ({ addItem }) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const shoppingCart = (item) => {
     setCart([...cart, item]);
@@ -24,6 +25,10 @@ const Shop = ({ addItem }) => {
   setCart(newCart);
   setTotal(total - removedItem.price);
 };
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
   
   return (
     <div>
@@ -31,7 +36,7 @@ const Shop = ({ addItem }) => {
         <h2>CoffeeRoasters</h2>
         <div>
           <button><Link to="/">Home</Link></button>
-          <button><Link to="/cart">Cart</Link></button>
+          <button onClick={toggleCart}>Cart</button>
         </div>
       </header>
       <div className='shopContent'>
@@ -46,6 +51,7 @@ const Shop = ({ addItem }) => {
         ))}
       </div>
       </div>
+      {isCartOpen && (
       <div className="shoppingCart">
         <h1>Shopping Cart</h1>
         <ul>
@@ -59,6 +65,7 @@ const Shop = ({ addItem }) => {
         <p>Total: ${total}</p>
         <button>Check Out</button>
       </div>
+      )}
     </div>
   );
 };
