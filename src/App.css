@@ -1,17 +1,29 @@
+body {
+  background-color: #ece3d9;
+}
+
 .homepageImage {
   width: 500px;
   height: auto;
+  border: solid 2px #a77358;
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px 5px #e0d1d1;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 3px black;
+  border-bottom: solid 3px #a77358;
+  border-radius: 20px;
   padding-bottom: 10px;
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   font-family: 'Abril Fatface', serif;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #cf7843;
+  
 }
 button {
   padding-left: 20px;
@@ -20,6 +32,8 @@ button {
   padding-top: 5px;
   margin-right: 10px;
   font-family: 'Josefin Sans', sans-serif;
+  border-radius: 5px;
+  border: solid 2px #a77358;
 }
 
 .homeContent {
@@ -34,11 +48,22 @@ button {
   grid-template-columns: repeat(4, 320px);
   gap: 10px;
   margin: 10px;
+  
 }
 
 .product {
-  border: solid 2px black;
+  border: solid 2px #a77358;
+  border-radius: 20px;
   padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 2px #a77358;
+  
 }
 
 .shoppingCart {
@@ -47,7 +72,15 @@ button {
   top: 80px;
   right: 10px;
   background-color: #fff;
-  min-height: 600px;
+  min-height: 400px;
   min-width: 350px;
   padding: 10px;
+}
+
+.shoppingCart li {
+  margin-bottom: 10px;
+}
+
+.shoppingCart button {
+  margin-left: 10px;
 }

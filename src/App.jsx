@@ -8,7 +8,6 @@ const App = () => {
         <h2>CoffeeRoasters</h2>
         <div>
           <button><Link to="/shop">Shop</Link></button>
-          <button><Link to="/cart">Cart</Link></button>
         </div>
       </header>
       <div className='homeContent'>
@@ -17,7 +16,7 @@ const App = () => {
           <p>Zen energy, endless ways to enjoy</p>
           <button><Link to="/shop">Shop</Link></button>
         </div>
-        <img className='homepageImage' src='src/pexels-ben-mack-5708045.jpg'/>
+        <img className='homepageImage' src='src/matcha.jpg'/>
       </div>
       
     </div>
